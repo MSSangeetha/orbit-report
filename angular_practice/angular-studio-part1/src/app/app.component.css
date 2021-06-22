@@ -1,4 +1,11 @@
 .box {
     display: flex;
     padding: 10px;
+    border-style: groove;
+ }
+
+ .container {
+     background-color: mediumseagreen;
+     font-family:cursive;     
+     border-style: groove;
  }
