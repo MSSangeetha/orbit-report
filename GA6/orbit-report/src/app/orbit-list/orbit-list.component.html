@@ -15,5 +15,14 @@
     <option [value]="option" *ngFor="let option of sourceList">{{option}}</option>
   </select> -->
 
-  <tr *ngFor="let Satellite of sourceList[0]">{{Satellite.name}}</tr>
+  <tr *ngFor="let list of satellites">{{list.name}}
+     <th>{{list.type}}</th>
+     <th>{{list.launchDate}}</th>
+     <th>{{list.orbitType}}</th>
+     <th>{{list.operational}}</th>
+  </tr>
+
+   <!-- <tr>
+      <th>hi</th>
+   </tr> -->
 </table>
