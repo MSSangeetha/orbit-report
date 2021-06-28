@@ -15,4 +15,16 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.operational = operational;
  }
 
+ 
+ shouldShowWarning() : boolean{
+    if(this.type === "Probe"){
+        console.log("inside if");
+    return true;
+    }
+    else{
+        console.log("inside else");
+        return false;
+    }
+     }
+
 }

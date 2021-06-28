@@ -12,5 +12,14 @@ export class OrbitListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  // shouldShowWarning() : boolean{
+  //   if(this.type === "Probe"){
+  //       console.log("inside if");
+  //   return true;
+  //   }
+  //   else{
+  //       console.log("inside else");
+  //       return false;
+  //   }
+  //    }
 }
