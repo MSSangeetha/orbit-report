@@ -26,3 +26,10 @@ th, td {
     margin: 5px 10px;
     padding: 6px;
 }
+
+.odd {
+    background-color:gray;
+    }
+.even {
+      background-color:greenyellow;
+    }

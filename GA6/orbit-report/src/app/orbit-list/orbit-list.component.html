@@ -1,8 +1,8 @@
 <h3>Orbit Report</h3>
 <table>
    <tr class="header-row">
-      <th class="sortable">Name</th>
-      <th class="sortable">Type</th>
+      <th (click) ="sort('name')" class="sortable">Name</th>
+      <th (click) = "sort('type')" class="sortable">Type</th>
       <th>Operational</th>
       <th>Orbit Type</th>
       <th>Launch Date</th>
@@ -15,15 +15,16 @@
     <option [value]="option" *ngFor="let option of sourceList">{{option}}</option>
   </select> -->
 
-  <tr *ngFor="let list of satellites">
+  <tr *ngFor="let list of satellites; let index=index; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even:even}">
      <td>{{list.name}}</td>
-     <td [class.warning]=shouldShowWarning>{{list.type}}</td>
-     <td>{{list.launchDate}}</td>
-     <td>{{list.orbitType}}</td>
+     <!-- <td *ngIf ="list.type === 'Probe'" [class.warning]=true>{{list.type}}</td> -->
+     <!-- <td *ngIf ="list.type === 'Probe'; else elseBlock" [class.warning]=true>{{list.type}}</td> -->
+     <!-- <td>{{list.type}}</td> -->
+     <td [class.warning]="list.shouldShowWarning()">{{list.type}}</td>
      <td>{{list.operational}}</td>
+     <td>{{list.orbitType}}</td>
+     <td>{{list.launchDate}}</td>
   </tr>
+ </table>
 
-   <!-- <tr>
-      <th>hi</th>
-   </tr> -->
-</table>
+ 
