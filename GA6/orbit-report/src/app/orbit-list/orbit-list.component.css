@@ -28,8 +28,8 @@ th, td {
 }
 
 .odd {
-    background-color:gray;
+    background-color:rgb(245, 240, 240);
     }
 .even {
-      background-color:greenyellow;
+      background-color:rgb(204, 248, 139);
     }
